@@ -8,8 +8,8 @@ import './styles.css'
 
 const Legal = () => {
   return (
-    <main className="bg-gray-900">
-      <div className="container mx-auto">
+    <main className="bg-gray-900 overflow-x-hidden">
+      <div className="container mx-auto overflow-x-hidden">
         <Navbar />
         <Hero />
         <Contact />
