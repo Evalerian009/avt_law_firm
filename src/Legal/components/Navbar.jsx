@@ -1,18 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAlignRight, faAlignLeft } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
 
-const Navbar = () => {
-  const [menu, setMenu] = useState(false)
-
-  function toggleMenu() {
-    setMenu(prev => !prev)
-  }
-
-  if (menu) {
-    document.getElementById('root').style.overflow='hidden'
-  }
-
+const Navbar = ({menu, handler}) => {
   return (
     <div className="flex justify-between items-center px-4 sm:px-10 md:px-6 py-4 md:py-7 md:sticky w-full top-0 bg-gray-900 z-[100] shadow-md shadow-slate-800">
        <div className='flex items-center h-fit font-semibold text-slate-100'>
@@ -34,7 +23,7 @@ const Navbar = () => {
         <a href="#newsletter">Newsletter</a>
        </div>
        <span className='text-slate-100 md:hidden cursor-pointer'>
-          <FontAwesomeIcon icon={menu ? faAlignLeft : faAlignRight} fontSize={25} onClick={toggleMenu}/>
+          <FontAwesomeIcon icon={Navbar ? faAlignLeft : faAlignRight} fontSize={25} onClick={() => handler()} />
         </span>
     </div>
   )
