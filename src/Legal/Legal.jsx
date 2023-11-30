@@ -16,19 +16,15 @@ const Legal = () => {
   }
 
   return (
-    <main className={`bg-gray-900`}>
-      <div className={`container mx-auto ${menu ? 'overflow-hidden' : ''}`}
-        style={{overflow: 'hidden'}}
-      >
-        <Navbar menu={menu} handler={toggleMenu} />
-        <Hero />
-        <Contact />
-        <Services />
-        <Newsletter />
-        <div>
-          Footer
-        </div>
-      </div>
+    <main className={`bg-gray-900 w-screen h-screen overflow-x-hidden ${menu ? 'overflow-y-hidden' : ''}`}>
+		<Navbar menu={menu} handler={toggleMenu} />
+		<Hero />
+		<Contact />
+		<Services />
+		<Newsletter />
+		<div>
+		  Footer
+		</div>
     </main>
   )
 }
